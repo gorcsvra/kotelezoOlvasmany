@@ -1,0 +1,2 @@
+# kotelezoOlvasmany
+gyakorlatok layoutra griddel
