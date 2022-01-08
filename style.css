@@ -1,0 +1,136 @@
+.container {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 3% 3%;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "logo header header header header header header header header header header header header right-side"
+      "logo top-bar top-bar top-bar top-bar top-bar top-bar top-bar top-bar top-bar top-bar top-bar top-bar right-side"
+      "left-side Az-egri-Csillagok Az-egri-Csillagok A-kőszívű-ember-fiai A-kőszívű-ember-fiai lotie-file lotie-file lotie-file lotie-file Légy-jó-mindhalálig Légy-jó-mindhalálig A-Pál-utcai-fiuk A-Pál-utcai-fiuk right-side"
+      "left-side Az-egri-Csillagok Az-egri-Csillagok A-kőszívű-ember-fiai A-kőszívű-ember-fiai lotie-file lotie-file lotie-file lotie-file Légy-jó-mindhalálig Légy-jó-mindhalálig A-Pál-utcai-fiuk A-Pál-utcai-fiuk right-side"
+      "left-side Az-ember-tragédiája Az-ember-tragédiája Tanár-úr-kérem Tanár-úr-kérem lotie-file lotie-file lotie-file lotie-file Az-arany-ember Az-arany-ember Édes-Anna Édes-Anna right-side"
+      "left-side Az-ember-tragédiája Az-ember-tragédiája Tanár-úr-kérem Tanár-úr-kérem lotie-file lotie-file lotie-file lotie-file Az-arany-ember Az-arany-ember Édes-Anna Édes-Anna right-side"
+      "left-side Toldi Toldi János-vitéz János-vitéz Szent-péter-esernyője Szent-péter-esernyője A-nagyenyedi-két-fűzfa A-nagyenyedi-két-fűzfa Esti-kornél Esti-kornél A-jó-palócok--tót-atyafiak A-jó-palócok--tót-atyafiak right-side"
+      "left-side Toldi Toldi János-vitéz János-vitéz Szent-péter-esernyője Szent-péter-esernyője A-nagyenyedi-két-fűzfa A-nagyenyedi-két-fűzfa Esti-kornél Esti-kornél A-jó-palócok--tót-atyafiak A-jó-palócok--tót-atyafiak right-side"
+      "left-side Beszterce-ostroma Beszterce-ostroma Fanni-hagyományai Fanni-hagyományai Misi-mókus-kalandjai Misi-mókus-kalandjai Esti-Kornél Esti-Kornél Abigél Abigél Még-több-kötelező Még-több-kötelező right-side"
+      "left-side Beszterce-ostroma Beszterce-ostroma Fanni-hagyományai Fanni-hagyományai Misi-mókus-kalandjai Misi-mókus-kalandjai Esti-Kornél Esti-Kornél Abigél Abigél Még-több-kötelező Még-több-kötelező right-side"
+      "left-footer-corner footer footer footer footer footer footer footer footer footer footer footer footer right-footer-corner";
+}
+      .wrapper , .box {
+        width:100%;
+    height:100%;
+        position: relative;
+       box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+        border-radius:15px;
+        margin:30px;
+        display: grid;
+        
+        justify-content: center;
+        align-items: center;
+        border-top:1px solid rgba(255,255,255,0.5);
+        border-left:1px solid rgba(255,255,255,0.5);
+        backdrop-filter: blur(5px);
+        transform-style: preserve-3d;
+        transform: perspective(800px) 
+      }
+
+
+  .footer { grid-area: footer; }
+  
+  .left-footer-corner { grid-area: left-footer-corner; }
+  
+  .right-footer-corner { grid-area: right-footer-corner; }
+  
+  .logo { grid-area: logo; }
+  
+  .header { grid-area: header; }
+  
+  .top-bar { grid-area: top-bar; }
+  
+  .right-side { grid-area: right-side; }
+  
+  .left-side { grid-area: left-side; }
+  
+  .lotie-file { grid-area: lotie-file;
+    margin-top: -8rem;
+  margin-bottom: -6rem;
+  margin-right:-13.5rem;
+  margin-left: -9rem;
+  }
+  
+  .Légy-jó-mindhalálig { grid-area: Légy-jó-mindhalálig; }
+  
+  .Az-ember-tragédiája { grid-area: Az-ember-tragédiája; }
+  
+  .Az-arany-ember { grid-area: Az-arany-ember; }
+  
+  .Édes-Anna { grid-area: Édes-Anna; }
+  
+  .Toldi { grid-area: Toldi; }
+  
+  .János-vitéz { grid-area: János-vitéz; }
+  
+  .A-Pál-utcai-fiuk { grid-area: A-Pál-utcai-fiuk; }
+  
+  .Tanár-úr-kérem { grid-area: Tanár-úr-kérem; }
+  
+  .Szent-péter-esernyője { grid-area: Szent-péter-esernyője; }
+  
+  .A-nagyenyedi-két-fűzfa { grid-area: A-nagyenyedi-két-fűzfa; }
+  
+  .Esti-kornél { grid-area: Esti-kornél; }
+  
+  .A-jó-palócok--tót-atyafiak { grid-area: A-jó-palócok--tót-atyafiak; }
+  
+  .Az-egri-Csillagok { grid-area: Az-egri-Csillagok; }
+  
+  .A-kőszívű-ember-fiai { grid-area: A-kőszívű-ember-fiai; }
+  
+  .Beszterce-ostroma { grid-area: Beszterce-ostroma; }
+  
+  .Fanni-hagyományai { grid-area: Fanni-hagyományai; }
+  
+  .Misi-mókus-kalandjai { grid-area: Misi-mókus-kalandjai; }
+  
+  .Esti-Kornél { grid-area: Esti-Kornél; }
+  
+  .Abigél { grid-area: Abigél; }
+  
+  .Még-több-kötelező { grid-area: Még-több-kötelező; }
+  
+  
+  html, body , .container {
+    height: 100%;
+    margin: 0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+  
+  /* For presentation only, no need to copy the code below */
+  
+  .container * {
+    /*border: 1px solid ;*/
+    position: relative;
+    
+  }
+  .background-lottie {
+    width: 100vw;
+    height: 100vh;
+    position:absolute;
+  z-index:-999;
+  }
+
+  .container *:after {
+    content:attr(class);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  
