@@ -7,10 +7,10 @@
   grid-template-areas:
     "logo header header header header header header header header header header header header right-side"
     "logo top-bar top-bar top-bar top-bar top-bar top-bar top-bar top-bar top-bar top-bar top-bar top-bar right-side"
-    "left-side Az-egri-Csillagok Az-egri-Csillagok A-kőszívű-ember-fiai A-kőszívű-ember-fiai lotie-file lotie-file lotie-file lotie-file Légy-jó-mindhalálig Légy-jó-mindhalálig A-Pál-utcai-fiuk A-Pál-utcai-fiuk right-side"
-    "left-side Az-egri-Csillagok Az-egri-Csillagok A-kőszívű-ember-fiai A-kőszívű-ember-fiai lotie-file lotie-file lotie-file lotie-file Légy-jó-mindhalálig Légy-jó-mindhalálig A-Pál-utcai-fiuk A-Pál-utcai-fiuk right-side"
-    "left-side Az-ember-tragédiája Az-ember-tragédiája Tanár-úr-kérem Tanár-úr-kérem lotie-file lotie-file lotie-file lotie-file Az-arany-ember Az-arany-ember Édes-Anna Édes-Anna right-side"
-    "left-side Az-ember-tragédiája Az-ember-tragédiája Tanár-úr-kérem Tanár-úr-kérem lotie-file lotie-file lotie-file lotie-file Az-arany-ember Az-arany-ember Édes-Anna Édes-Anna right-side"
+    "left-side Az-egri-Csillagok Az-egri-Csillagok A-kőszívű-ember-fiai A-kőszívű-ember-fiai lottie-file lottie-file lottie-file lottie-file Légy-jó-mindhalálig Légy-jó-mindhalálig A-Pál-utcai-fiuk A-Pál-utcai-fiuk right-side"
+    "left-side Az-egri-Csillagok Az-egri-Csillagok A-kőszívű-ember-fiai A-kőszívű-ember-fiai lottie-file lottie-file lottie-file lottie-file Légy-jó-mindhalálig Légy-jó-mindhalálig A-Pál-utcai-fiuk A-Pál-utcai-fiuk right-side"
+    "left-side Az-ember-tragédiája Az-ember-tragédiája Tanár-úr-kérem Tanár-úr-kérem lottie-file lottie-file lottie-file lottie-file Az-arany-ember Az-arany-ember Édes-Anna Édes-Anna right-side"
+    "left-side Az-ember-tragédiája Az-ember-tragédiája Tanár-úr-kérem Tanár-úr-kérem lottie-file lottie-file lottie-file lottie-file Az-arany-ember Az-arany-ember Édes-Anna Édes-Anna right-side"
     "left-side Toldi Toldi János-vitéz János-vitéz Szent-péter-esernyője Szent-péter-esernyője A-nagyenyedi-két-fűzfa A-nagyenyedi-két-fűzfa Esti-kornél Esti-kornél A-jó-palócok--tót-atyafiak A-jó-palócok--tót-atyafiak right-side"
     "left-side Toldi Toldi János-vitéz János-vitéz Szent-péter-esernyője Szent-péter-esernyője A-nagyenyedi-két-fűzfa A-nagyenyedi-két-fűzfa Esti-kornél Esti-kornél A-jó-palócok--tót-atyafiak A-jó-palócok--tót-atyafiak right-side"
     "left-side Beszterce-ostroma Beszterce-ostroma Fanni-hagyományai Fanni-hagyományai Misi-mókus-kalandjai Misi-mókus-kalandjai Esti-Kornél Esti-Kornél Abigél Abigél Még-több-kötelező Még-több-kötelező right-side"
@@ -68,11 +68,19 @@
   grid-area: left-side;
 }
 
-.lotie-file {
-  grid-area: lotie-file;
+.lottie-file {
+  grid-area: lottie-file;
   margin-top: -8rem;
   margin-bottom: -6rem;
   margin-right: -13.5rem;
+  margin-left: -9rem;
+}
+
+.lottie-file-night {
+  grid-area: lottie-file;
+  margin-top: -8rem;
+  margin-bottom: -6rem;
+  margin-right: -10rem;
   margin-left: -9rem;
 }
 
@@ -165,10 +173,7 @@ body,
   box-sizing: border-box;
 
 }
-body
-.active{
-  background-color: navy;
-}
+
 
 /* For presentation only, no need to copy the code below */
 
@@ -176,12 +181,7 @@ body
   border: 1px solid red ;
   position: relative;
 }
-.background-lottie {
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  z-index: -999;
-}
+
 
 .container *:after {
   content: attr(class);
@@ -195,70 +195,10 @@ body
   justify-content: center;
 }
 
-.button {
-  display: flax;
-  align-items: center;
-}
-
-.darkMode {
-  margin-right: 10px;
-  color: var(--text-semi-black);
-  font-size: 12px;
-  font-weight: 700;
-}
-
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 54px;
-  height: 28px;
-}
-
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 20px;
-  width: 20px;
-  left: 4px;
-  bottom: 4px;
-  background-color: var(--bg-pattern);
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-input:checked + .slider {
-    background: linear-gradient(90.43deg,#378fe6 -70.79%, #3eda82 99.63%);
-}
-
-input:focus + .slider {
-    box-shadow: 0 0 1px #378fe6;
- } 
-
- input:checked + .slider::before {
-   -webkit-transform: translateX(26px);
-   -ms-transform: translateX(26px);
-   transform: translateX(26px); 
- }
 
 
 
+/*Éjszaka/nappal kapcsoló*/
  /*Rounded slider*/
  .slider.round {
      border-radius: 34px;
@@ -267,3 +207,116 @@ input:focus + .slider {
  .slider.round:before {
      border-radius: 50%;
  }
+
+
+
+
+/* The switch - the box around the slider */
+body {
+  background-color: white;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/*   // Hide checkbox
+ */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/*   // The slider
+   */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: lightblue;
+  transition: 0.4s ease-in-out;
+}
+/*   
+  // Design of slider for light mode
+ */
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 23px;
+  width: 23px;
+  left: 6px;
+  bottom: 6px;
+  background-color: yellow;
+  box-shadow: 0px 0px 5px 4px rgb(255, 217, 0);
+
+  transition: 0.4s;
+}
+
+/*   // When theme is dark, background is dark */
+
+.theme-dark .slider {
+  background-color: #3a2864;
+}
+
+/*    // If theme is dark, but slider is to the left, move it to the right and turn it into a moon
+ */
+.theme-dark .slider:before {
+  transform: translateX(26px);
+  height: 3px;
+  width: 3px;
+  background-color: lightgrey;
+  bottom: 15px;
+  left: 10px;
+  box-shadow: 10px -7px 0px 1px lightgrey, -4px -8px 0px 0px lightgrey,
+    6px 6px 0px 1px lightgrey, 5px -1px 5px 13px white, 5px -1px 0px 12px white;
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.theme-dark .container {
+color: cornflowerblue;
+}
+
+
+.theme-light  .background-lottie-night {
+  display:none;
+}
+
+.theme-dark  .background-lottie {
+  display:none;
+}
+.theme-light .lottie-file-night {
+display:none;
+}
+.theme-dark .lottie-file {
+ display: none;
+}
+
+.theme-light .background-lottie  {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: -999;
+  
+}
+
+.theme-dark .background-lottie-night  {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: -999;
+}
