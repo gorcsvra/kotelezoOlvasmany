@@ -54,6 +54,7 @@
 
 .header {
   grid-area: header;
+   justify-content: center ;
 }
 
 .top-bar {

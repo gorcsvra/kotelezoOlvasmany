@@ -1,0 +1,87 @@
+html, body, .grid-container { height: 100%; margin: 0; }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 0.5fr 1.5fr 1.5fr 1.5fr 1.5fr 0.5fr;
+  grid-template-rows: 0.5fr 1.5fr 1.5fr 1.5fr 0.5fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "logo Top-bar Top-bar Top-bar Top-bar right-top-corner"
+    "side-bar Egri-Csillagok-cím Egri-Csillagok-cím üveg kép right-side"
+    "side-bar kép1 üveg1 kép2 üveg2 right-side"
+    "side-bar üveg3 kép3 üveg4 kép4 right-side"
+    "left-bottom-corner footer footer footer footer right-bottom-corner";
+}
+
+ img {
+   /*  object-fit: cover;
+    min-height: 100%;
+    width: 100%; */
+    object-fit: cover;
+    min-height: 100%;
+    width: 100%;
+  }
+
+
+.Egri-Csillagok-cím { grid-area: Egri-Csillagok-cím; }
+
+.logo { grid-area: logo; }
+
+.Top-bar { grid-area: Top-bar; }
+
+.üveg { grid-area: üveg; }
+
+.kép1 { grid-area: kép;
+
+ }
+
+.kép2 { grid-area: kép1;
+ 
+ }
+ 
+
+.üveg1 { grid-area: üveg1; }
+
+.kép3 { grid-area: kép2;
+    
+     } 
+
+.üveg2 { grid-area: üveg2; }
+
+.üveg3 { grid-area: üveg3; }
+
+.kép4 { grid-area: kép3; 
+    
+     }
+
+.üveg4 { grid-area: üveg4; }
+
+.kép5 { grid-area: kép4;
+    
+     } 
+
+.side-bar { grid-area: side-bar; }
+
+.right-side { grid-area: right-side; }
+
+.right-top-corner { grid-area: right-top-corner; }
+
+.footer { grid-area: footer; }
+
+.left-bottom-corner { grid-area: left-bottom-corner; }
+
+.right-bottom-corner { grid-area: right-bottom-corner; }
+
+
+/* For presentation only, no need to copy the code below */
+.grid-container * {
+  border: 1px solid red;
+  position: relative;
+}
+
+.grid-container *:after {
+  content:attr(class);
+  position: absolute;
+  top: 0;
+  left: 0;
+}

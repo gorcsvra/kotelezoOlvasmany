@@ -30,7 +30,11 @@
         <div class="left-footer-corner "></div>
         <div class="right-footer-corner "></div>
         <div class="logo "></div>
-        <div class="header "></div>
+        <div class="header "><!--Light/dark kapcsoló-->
+            <label id ="switch" class="switch">
+                <input type="checkbox" onchange="toggleTheme()" id="slider">
+                <span class="slider round"></span>
+            </label></div>
         <div class="top-bar "></div>
         <div class="right-side "></div>
         <div class="left-side "></div>
@@ -70,11 +74,7 @@
     <script src="app.js"></script>
 
 
-<!--Light/dark kapcsoló-->
-    <label id ="switch" class="switch">
-        <input type="checkbox" onchange="toggleTheme()" id="slider">
-        <span class="slider round"></span>
-    </label>
+
 
 
     <script src="app.js"></script>
